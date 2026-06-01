@@ -105,6 +105,65 @@
       </table>
     </section>
 
+    <br>
+    <section id="contacto">
+      <h2>Contacto</h2>
+      <p>Completá el formulario para contactarme:</p>
+
+      <form action="#" method="POST">
+        <fieldset>
+          <legend>Formulario de contacto</legend>
+
+          <!-- NOMBRE -->
+          <label for="nombre">Nombre:</label><br>
+          <input 
+            type="text" 
+            id="nombre" 
+            name="nombre" 
+            placeholder="Escribí tu nombre completo" 
+            minlength="3"
+            maxlength="50"
+            required
+          ><br><br>
+
+          <!-- EMAIL -->
+          <label for="email">Email:</label><br>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            placeholder="Ej: tucorreo@gmail.com" 
+            required
+          ><br><br>
+
+          <!-- ASUNTO -->
+          <label for="asunto">Asunto:</label><br>
+          <input 
+            type="text" 
+            id="asunto" 
+            name="asunto" 
+            placeholder="Ej: Consulta, propuesta, trabajo..." 
+            minlength="5"
+          ><br><br>
+
+          <!-- MENSAJE -->
+          <label for="mensaje">Mensaje:</label><br>
+          <textarea 
+            id="mensaje" 
+            name="mensaje" 
+            rows="5" 
+            placeholder="Escribí tu mensaje acá..." 
+            minlength="10"
+            required
+          ></textarea><br><br>
+
+          <!-- BOTÓN -->
+          <button type="submit">Enviar mensaje</button>
+
+        </fieldset>
+      </form>
+    </section>
+
 </main>
 
   <footer></footer>
