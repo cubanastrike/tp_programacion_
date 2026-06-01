@@ -3,236 +3,371 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Portafolio</title>
+  <title>Portafolio</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-   <header id="inicio">
-  <h1>Matías Barú</h1>
-  <p>Desarrollador Web | Junior Developer</p>
-  <img src="img/Welcome to my.gif" alt="Foto de perfil de Matías Barú, desarrollador web">
+<div id="inicio" style="position:absolute; top:0;"></div>
+
+<header>
+  <nav class="navbar">
+    <div class="nav-top">
+      <div class="nav-logo">
+        <img src="img/logo.jpg" width="40" height="40" alt="logo" class="logo_ico">
+        <div class="nav-logo-texto">
+          <span class="nav-nombre">MATÍAS BARÚ</span>
+          <span class="nav-rol">[DESARROLLADOR WEB]</span>
+        </div>
+      </div>
+      <div class="nav-accesos">
+        <span class="corchete">(</span>
+        <a href="#inicio">INICIO</a>
+        <span class="corchete">)</span>
+        <span class="punto">·</span>
+        <span class="corchete">(!</span>
+        <a href="#contacto">CONTACTO</a>
+        <span class="corchete">!)</span>
+      </div>
+    </div>
+    <div class="nav-bottom">
+      <ul class="nav-lista">
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><span class="separador"></span></li>
+        <li><span class="separador">/</span></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><span class="separador">/</span></li>
+        <li><a href="#tecnologias">Tecnologías</a></li>
+        <li><span class="separador">/</span></li>
+        <li><a href="#cursos">Cursos</a></li>
+      </ul>
+      <span class="comentario"> junior developer</span>
+    </div>
+  </nav>
 </header>
 
-  <nav>
-  <ul>
-     <li><a href="#inicio">Inicio</a></li>
-    <li><a href="#sobre-mi">Sobre mí</a></li>
-    <li><a href="#redes">Redes sociales</a></li>
-    <li><a href="#proyectos">Proyectos</a></li>
-    <li><a href="#tecnologias">Tecnologías</a></li>
-    <li><a href="#cursos">Cursos</a></li>
-    <li><a href="#contacto">Contacto</a></li>
-  </ul>
-</nav>
+<div class="hero">
+  <h1 class="hero_titulo"> ✦ WELCOME TO MY PORTFOLIO ✦</h1>
+  <div class="btn_cv_wrapper">
+    <a href="cv.pdf" download class="btn_cv">DESCARGAR CV</a>
+  </div>
+</div>
 
-  <main>
+<main>
+  <br><br><br><br>
 
   <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>
-      Estudiante de programación apasionado que disfruta aprendiendo y creando cosas desde cero.
-      Actualmente enfocado en desarrollo frontend y bases de datos.
-    </p>
+  <input type="checkbox" id="toggle-terminal" hidden>
 
-    <h3>¿Qué me define?</h3>
-    <ul>
-      <li>Curioso y autodidacta</li>
-      <li>Trabajo en equipo</li>
-      <li>Proyectos con propósito</li>
-      <li>Mejorar constantemente</li>
-    </ul>
-  </section>
+  <div class="conoceme-wrapper">
+    <h2 class="conoceme-titulo">CONOCEME</h2>
+    <label for="toggle-terminal" class="btn-leer">[ LEER ]</label>
 
- <section id="redes">
-    <h2>Redes sociales</h2>
-    <p>Podés seguirme en mis redes sociales para ver mis proyectos y novedades:</p>
-  <a href="https://www.instagram.com/baruullo_/" target="_blank">
-    <img src="https://img.shields.io/badge/Instagram-0D1117?style=for-the-badge&logo=instagram&logoColor=E4405F" />
-  </a>
-  <a href="mailto:matiasbaru30@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-0D1117?style=for-the-badge&logo=gmail&logoColor=EA4335" />
-  </a>
-  <a href="https://discord.gg/tCYTp6qr" target="_blank">
-    <img src="https://img.shields.io/badge/Discord-0D1117?style=for-the-badge&logo=discord&logoColor=5865F2" />
-  </a>
-  <a href="https://github.com/cubanastrike" target="_blank">
-    <img src="https://img.shields.io/badge/GitHub-0D1117?style=for-the-badge&logo=github&logoColor=181717" /> 
-  </a>
-
-  </section>
-
-  <section id="proyectos">
-  <h2>Proyectos</h2>
-  <p>
-    Trabajos prácticos realizados durante la cursada para aplicar conocimientos.
+    <div class="terminal">
+      <div class="terminal-header">
+        <span class="terminal-dot rojo"></span>
+        <span class="terminal-dot amarillo"></span>
+        <span class="terminal-dot verde"></span>
+        <span class="terminal-titulo">matias_baru.exe</span>
+      </div>
+      <div class="terminal-body">
+  <p class="terminal-linea">
+    > Soy Matias Barú, y mi pasión por la tecnología,
+    la programación y el diseño me impulsa cada día.<br>
+    > Como desarrollador web, me estoy especializando en frontend.
+    <br>
+    > Disfruto desafiando los límites y explorando nuevas 
+      tecnologías 
+    para ofrecer soluciones creativas y efectivas.<br>
+    <br>
+    > Innovador, proactivo y con capacidad para diseñar,
+    crear y mantener sitios web atractivos e interactivos.<br>
+    > Me adapto a las necesidades del equipo y me comprometo
+    con los objetivos de trabajo establecidos._
   </p>
-  <h3>Proyecto: Base de Datos</h3>
-<p>Diseño de un sistema para zoológico.</p>
+</div>
+    </div>
+  </div>
+</section>
+<br><br><br><br><br><br><br><br>
 
-<br>
+<!-- SECCIÓN DE PROYECTOS -->
+<section id="proyectos">
+  <h2 class="proyectos-titulo">PROYECTOS</h2>
+  <p class="proyectos-subtitulo">// <span>trabajos académicos</span></p>
 
-<a href="doc/TP_Transacciones_ (1).pdf" target="_blank">Abrir PROYECTO</a>
-  </section>
+  <div style="display: flex; justify-content: center;">
+    <label class="proj-label">
+      <input type="checkbox">
+      <div class="proj-card">
+        <div class="proj-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <ellipse cx="12" cy="5" rx="9" ry="3"/>
+            <path d="M3 5v14c0 1.66 4.03 3 9 3s9-1.34 9-3V5"/>
+            <path d="M3 12c0 1.66 4.03 3 9 3s9-1.34 9-3"/>
+          </svg>
+          <span class="proj-dot"></span>
+        </div>
+        <p class="proj-name">tp_transacciones</p>
+        <p class="proj-type">// base de datos</p>
+        <a href="doc/TP_Transacciones_ (1).pdf" target="_blank" class="proj-cmd" onclick="event.stopPropagation()">
+          <span>$</span> abrir.pdf
+        </a>
+      </div>
+    </label>
+  </div>
+</section>
+
+<br><br><br><br><br><br><br>
+
+<!-- SECCIÓN TECNOLOGÍAS -->
+<section id="tecnologias">
+  <h2 class="tec-titulo">TECNOLOGÍAS</h2>
+  <p class="tec-subtitulo">// <span>stack actual</span> — en aprendizaje continuo</p>
+
+  <div class="tec-grid">
+    <div class="tech t-html">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+      <span>HTML5</span>
+    </div>
+    <div class="tech t-css">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+      <span>CSS3</span>
+    </div>
+    <div class="tech t-js">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+      <span>JavaScript</span>
+    </div>
+    <div class="tech t-cs">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+      <span>C#</span>
+    </div>
+    <div class="tech t-net">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET">
+      <span>.NET</span>
+    </div>
+    <div class="tech t-mysql">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+      <span>MySQL</span>
+    </div>
+    <div class="tech t-git">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+      <span>Git</span>
+    </div>
+    <div class="tech t-github">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub">
+      <span>GitHub</span>
+    </div>
+    <div class="tech t-vscode">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
+      <span>VS Code</span>
+    </div>
+  </div>
+<input type="checkbox" id="toggle-tabla" style="display:none">
+
+<div class="botton-tabla">
+  <label for="toggle-tabla" onclick="scrollTabla()" class="toggle-btn">
+    <span> Estadisticas</span>
+  </label>
+</div>
+<div class="table-outer">
+  <div class="tec-table-wrap">
+    <table class="tec-table">
+      <thead>
+        <tr>
+          <th>TECNOLOGÍA</th>
+          <th>CATEGORÍA</th>
+          <th>NIVEL</th>
+          <th>DESDE</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>HTML5</td>
+          <td><span class="badge b-front">front-end</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2024</span></td>
+        </tr>
+        <tr>
+          <td>CSS3</td>
+          <td><span class="badge b-front">front-end</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2024</span></td>
+        </tr>
+        <tr>
+          <td>JavaScript</td>
+          <td><span class="badge b-front">front-end</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div><span>básico</span></div></td>
+          <td><span class="año">2025</span></td>
+        </tr>
+        <tr>
+          <td>C#</td>
+          <td><span class="badge b-back">back-end</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2024</span></td>
+        </tr>
+        <tr>
+          <td>.NET</td>
+          <td><span class="badge b-back">back-end</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2024</span></td>
+        </tr>
+        <tr>
+          <td>SQL</td>
+          <td><span class="badge b-db">base de datos</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2025</span></td>
+        </tr>
+        <tr>
+          <td>Git</td>
+          <td><span class="badge b-ver">versionado</span></td>
+          <td><div class="nivel avan"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div><span>avanzado</span></div></td>
+          <td><span class="año">2025</span></td>
+        </tr>
+        <tr>
+          <td>GitHub</td>
+          <td><span class="badge b-ver">versionado</span></td>
+          <td><div class="nivel avan"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div><span>avanzado</span></div></td>
+          <td><span class="año">2025</span></td>
+        </tr>
+        <tr>
+          <td>VS Code</td>
+          <td><span class="badge b-ed">editor</span></td>
+          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
+          <td><span class="año">2024</span></td>
+        </tr>
+        <tr class="footer-row">
+          <td colspan="4">// tecnologías en aprendizaje continuo</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
   <br>
+<!-- SECCIÓN CURSOS -->
+  <section id="cursos">
+  <h2 class="cursos-titulo">CURSOS</h2>
+  <p class="cursos-subtitulo">// <span>recursos recomendados</span> — para aprender a programar</p>
 
-  <section id="tecnologias">
-      <h2>Tecnologías aprendidas</h2>
-      <p>Resumen de tecnologías, nivel y año de aprendizaje:</p>
+  <div class="cursos-grid">
 
-      <h4>◈ Front-end</h4>
-<img src="https://img.shields.io/badge/HTML5-0D1117?style=for-the-badge&logo=html5&logoColor=E34C26" />
-<img src="https://img.shields.io/badge/CSS3-0D1117?style=for-the-badge&logo=css3&logoColor=1572B6" />
-<img src="https://img.shields.io/badge/JavaScript-0D1117?style=for-the-badge&logo=javascript&logoColor=F7DF1E" />
+    <div class="curso-card">
+      <div class="curso-info">
+        <span class="curso-badge">JavaScript</span>
+        <h3 class="curso-nombre">JS desde CERO — Nivel Junior</h3>
+        <p class="curso-autor">// Soy Dalto</p>
+      </div>
+     <div class="video-neon">
+  <div class="video-overlay"></div>
+  <iframe
+    width="100%" height="220"
+    src="https://www.youtube.com/embed/EbMi1Qj4rVE"
+    title="Curso JavaScript Master - Dalto"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+    </div>
 
-<h4>◈ Back-end & Sistemas</h4>
-<img src="https://img.shields.io/badge/C%23-0D1117?style=for-the-badge&logo=c-sharp&logoColor=9B4F96" />
-<img src="https://img.shields.io/badge/.NET-0D1117?style=for-the-badge&logo=dotnet&logoColor=7A7AFF" />
+    <div class="curso-card">
+      <div class="curso-info">
+        <span class="curso-badge">JavaScript</span>
+        <h3 class="curso-nombre">JS desde CERO — Nivel Master</h3>
+        <p class="curso-autor">// Soy Dalto</p>
+      </div>
+     <div class="video-neon">
+  <div class="video-overlay"></div>
+  <iframe
+    width="100%" height="220"
+    src="https://www.youtube.com/embed/EbMi1Qj4rVE"
+    title="Curso JavaScript Master - Dalto"
+    frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
 
-<h4>◈ Base de datos</h4>
-<img src="https://img.shields.io/badge/MySQL-0D1117?style=for-the-badge&logo=mysql&logoColor=4479A1" />
+  </div>
+</section>
+<!-- SECCIÓN CONTACTO -->
+  <section id="contacto">
+  <h2>Contacto</h2>
+  <p>Completá el formulario para contactarme:</p>
 
-      <table border="1">
-        <thead>
-          <tr>
-            <th>Tecnología</th>
-            <th>Categoría</th>
-            <th>Nivel</th>
-            <th>Desde</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>HTML5</td>
-            <td>Estructura web</td>
-            <td>Intermedio</td>
-            <td>2024</td>
-          </tr>
-          <tr>
-            <td>CSS3</td>
-            <td>Estilos</td>
-            <td>Intermedio</td>
-            <td>2024</td>
-          </tr>
-          <tr>
-            <td>SQL</td>
-            <td>Programación</td>
-            <td>Intermedio</td>
-            <td>2025</td>
-          </tr>
-          <tr>
-            <td>Git</td>
-            <td>Versionado</td>
-            <td>Avanzado</td>
-            <td>2025</td>
-          </tr>
-          <tr>
-            <td>GitHub</td>
-            <td>Repositorios</td>
-            <td>Avanzado</td>
-            <td>2025</td>
-          </tr>
-          <tr>
-            <td>Visual Studio Code</td>
-            <td>Editor</td>
-            <td>Intermedio</td>
-            <td>2024</td>
-             <tr>
-  <td colspan="4">Tecnologías en aprendizaje continuo</td>
-</tr>
-          </tr>
-        </tbody>
-      </table>
-    </section>
+  <div id="contacto-inner">
 
-    <br>
-     <section id="cursos">
-      <h2>Cursos recomendados</h2>
-      <p>Algunos recursos que recomiendo para aprender programación:</p>
+    <form action="#" method="POST" class="contact-form">
+      <fieldset class="fieldset">
+        <legend class="title">contactame</legend>
+        <input class="imput_1" type="text" id="nombre" name="nombre" placeholder="Name" minlength="3" maxlength="50" required><br><br>
+        <input class="imput_1" type="email" id="email" name="email" placeholder="Email" required><br><br>
+        <input class="imput_1" type="text" id="asunto" name="asunto" placeholder="Ej: Consulta, propuesta, trabajo..." minlength="5"><br><br>
+        <textarea class="escribe" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..." minlength="10" required></textarea><br><br>
+        <button type="submit">Enviar mensaje</button>
+      </fieldset>
+    </form>
 
-      <iframe
-  width="560"
-  height="315"
-  src="https://www.youtube.com/embed/ELSm-G201Ls?autoplay=0"
-  title="YouTube video"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen>
-</iframe>
-    </section>
+    <div class="redes-col">
+      <p class="redes-col-header">// REDES SOCIALES</p>
 
-    <section id="contacto">
-      <h2>Contacto</h2>
-      <p>Completá el formulario para contactarme:</p>
+      <a href="https://github.com/TU_USUARIO" target="_blank" class="red-card-contact">
+        <div class="card-icon github-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-name">GitHub</span>
+          <span class="card-handle">@tu_usuario</span>
+        </div>
+        <div class="status-dot"></div>
+      </a>
 
-      <form action="#" method="POST">
-        <fieldset>
-          <legend>Formulario de contacto</legend>
+      <a href="https://instagram.com/TU_USUARIO" target="_blank" class="red-card-contact">
+        <div class="card-icon instagram-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="2" width="20" height="20" rx="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r=".5" fill="currentColor" stroke="none"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-name">Instagram</span>
+          <span class="card-handle">@tu_usuario</span>
+        </div>
+        <div class="status-dot"></div>
+      </a>
 
-          <!-- NOMBRE -->
-          <label for="nombre">Nombre:</label><br>
-          <input 
-            type="text" 
-            id="nombre" 
-            name="nombre" 
-            placeholder="Escribí tu nombre completo" 
-            minlength="3"
-            maxlength="50"
-            required
-          ><br><br>
+      <a href="https://discord.com/users/TU_ID" target="_blank" class="red-card-contact">
+        <div class="card-icon discord-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/>
+          </svg>
+        </div>
+        <div class="card-info">
+          <span class="card-name">Discord</span>
+          <span class="card-handle">tu_usuario</span>
+        </div>
+        <div class="status-dot"></div>
+      </a>
 
-          <!-- EMAIL -->
-          <label for="email">Email:</label><br>
-          <input 
-            type="email" 
-            id="email" 
-            name="email" 
-            placeholder="Ej: tucorreo@gmail.com" 
-            required
-          ><br><br>
-
-          <!-- ASUNTO -->
-          <label for="asunto">Asunto:</label><br>
-          <input 
-            type="text" 
-            id="asunto" 
-            name="asunto" 
-            placeholder="Ej: Consulta, propuesta, trabajo..." 
-            minlength="5"
-          ><br><br>
-
-          <!-- MENSAJE -->
-          <label for="mensaje">Mensaje:</label><br>
-          <textarea 
-            id="mensaje" 
-            name="mensaje" 
-            rows="5" 
-            placeholder="Escribí tu mensaje acá..." 
-            minlength="10"
-            required
-          ></textarea><br><br>
-
-          <!-- BOTÓN -->
-          <button type="submit">Enviar mensaje</button>
-
-        </fieldset>
-      </form>
-    </section>
-
-    <footer>
-  <p>© 2026 Matías Barú</p>
-  <ul>
-    <li><a href="https://www.instagram.com/baruullo_/" target="_blank">Instagram</a></li>
-    <li><a href="https://github.com/cubanastrike" target="_blank">GitHub</a></li>
-    <li><a href="#inicio">↑ Volver al inicio</a></li>
-  </ul>
-</footer>
-
+    </div>
+  </div>
+</section>
 </main>
 
-   <a href="#inicio">↑ Volver al inicio</a>
+<footer>
+  <p>© 2026 Matías Barú</p>
+  <a href="#inicio">↑ Volver al inicio</a>
 </footer>
 
+
 </body>
+
 </html>
