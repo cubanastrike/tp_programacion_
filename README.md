@@ -109,7 +109,7 @@ Aplicar y profundizar conocimientos de HTML y CSS, incluyendo:
 
 
 
-![Inicio](img/capturas_del_proyecto/cacaptura1.png)
+![Inicio](img/capturas_del_proyecto/captura1.png)
 ![Sobre mí](img/capturas_del_proyecto/captura4.png)
 ![Tecnologías](img/capturas_del_proyecto/captura2.png)
 ![Tecnologías](img/capturas_del_proyecto/captura3.png)
