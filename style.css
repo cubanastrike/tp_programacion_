@@ -734,3 +734,70 @@ header {
 .fieldset button[type="submit"]:active {
   box-shadow: 2px 2px 8px #c5c5c5, -2px -2px 8px #fff;
 }
+
+* ── REDES CONTACTO ── */
+.redes-col {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 200px;
+}
+
+.redes-col-header {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #2e2e2e;
+  letter-spacing: 0.15em;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #111;
+}
+
+.red-card-contact {
+  background: #0a0a0a;
+  border: 1px solid #1a1a1a;
+  border-radius: 8px;
+  padding: 12px 14px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: border-color .3s, background .3s;
+}
+.red-card-contact:hover { background: #111; border-color: #333; }
+
+.red-card-contact .card-icon {
+  width: 32px; height: 32px;
+  border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+
+.red-card-contact .card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.red-card-contact .card-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  color: #c9d1d9;
+  letter-spacing: 0.07em;
+}
+
+.red-card-contact .card-handle {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  color: #333;
+  letter-spacing: 0.06em;
+}
+
+.red-card-contact .status-dot {
+  width: 5px; height: 5px;
+  border-radius: 50%;
+  background: #3a8a3a;
+  animation: pulso 2s ease-in-out infinite;
+  margin-left: auto;
+  flex-shrink: 0;
+}
