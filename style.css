@@ -355,3 +355,146 @@ header {
   color: rgba(245,158,11,.5); border-color: rgba(245,158,11,.17);
 }
 .proj-cmd span { color: #f59e0b; }
+
+/* ── TECNOLOGÍAS ── */
+#tecnologias {
+  padding: 100px 44px 0;
+  background: #000;
+  text-align: center;
+}
+.tec-titulo {
+  font-family: 'luxena', sans-serif;
+  color: #4e4e4e;
+  font-size: 5em;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+  animation: titilar 4s infinite;
+}
+.tec-subtitulo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: #333;
+  letter-spacing: 0.12em; margin-bottom: 48px;
+}
+.tec-subtitulo span { color: #555; }
+
+/* logos */
+.tec-grid {
+  display: flex; flex-wrap: wrap; gap: 14px;
+  justify-content: center; max-width: 600px; margin: 0 auto;
+}
+.tech {
+  width: 80px; height: 80px;
+  background: #0a0a0a; border: 1px solid #1c1c1c;
+  border-radius: 16px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 6px; cursor: default;
+  transition: transform .3s, border-color .3s, background .3s, box-shadow .3s;
+}
+.tech img {
+  width: 32px; height: 32px; object-fit: contain; transition: filter .3s;
+}
+.tech span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: #444; letter-spacing: .06em; transition: color .3s;
+}
+.tech:hover { transform: translateY(-5px); background: #0f0f0f; }
+.tech:hover span { color: #888; }
+
+.t-html:hover { border-color: #e34c2655; box-shadow: 0 0 18px #e34c2640, 0 0 6px #e34c2630; }
+.t-html:hover img { filter: drop-shadow(0 0 6px #e34c26); }
+.t-css:hover { border-color: #1572b655; box-shadow: 0 0 18px #1572b640, 0 0 6px #1572b630; }
+.t-css:hover img { filter: drop-shadow(0 0 6px #1572b6); }
+.t-js:hover { border-color: #f7df1e55; box-shadow: 0 0 18px #f7df1e40, 0 0 6px #f7df1e30; }
+.t-js:hover img { filter: drop-shadow(0 0 6px #f7df1e); }
+.t-cs:hover { border-color: #9b4f9655; box-shadow: 0 0 18px #9b4f9640, 0 0 6px #9b4f9630; }
+.t-cs:hover img { filter: drop-shadow(0 0 6px #9b4f96); }
+.t-net:hover { border-color: #7a7aff55; box-shadow: 0 0 18px #7a7aff40, 0 0 6px #7a7aff30; }
+.t-net:hover img { filter: drop-shadow(0 0 6px #7a7aff); }
+.t-mysql:hover { border-color: #4479a155; box-shadow: 0 0 18px #4479a140, 0 0 6px #4479a130; }
+.t-mysql:hover img { filter: drop-shadow(0 0 6px #4479a1); }
+.t-git:hover { border-color: #f0503255; box-shadow: 0 0 18px #f0503240, 0 0 6px #f0503230; }
+.t-git:hover img { filter: drop-shadow(0 0 6px #f05032); }
+.t-github:hover { border-color: #a371f755; box-shadow: 0 0 18px #a371f740, 0 0 6px #a371f730; }
+.t-github:hover img { filter: drop-shadow(0 0 8px #a371f7); }
+.t-vscode:hover { border-color: #007acc55; box-shadow: 0 0 18px #007acc40, 0 0 6px #007acc30; }
+.t-vscode:hover img { filter: drop-shadow(0 0 6px #007acc); }
+
+/* tabla */
+.tec-table-wrap {
+  max-width: 600px; margin: 48px auto 0;
+  border: 1px solid #1a1a1a; border-radius: 10px; overflow: hidden;
+}
+.tec-table { width: 100%; border-collapse: collapse; }
+.tec-table thead tr { background: #0d0d0d; border-bottom: 1px solid #1a1a1a; }
+.tec-table thead th {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: #333; letter-spacing: 0.12em;
+  padding: 12px 16px; text-align: left; font-weight: 700;
+}
+.tec-table thead th:first-child { color: #555; }
+.tec-table tbody tr { border-bottom: 1px solid #111; transition: background .2s; }
+.tec-table tbody tr:last-child { border-bottom: none; }
+.tec-table tbody tr:hover { background: #0a0a0a; }
+.tec-table tbody td {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: #555; padding: 11px 16px; letter-spacing: 0.06em;
+}
+.tec-table tbody td:first-child { color: #c9d1d9; font-weight: 700; }
+.badge {
+  display: inline-block; font-size: 8px;
+  padding: 3px 8px; border-radius: 4px; letter-spacing: 0.08em; font-weight: 700;
+}
+.b-front { color: #09f;    background: rgba(0,153,255,.08);   border: 1px solid rgba(0,153,255,.15); }
+.b-back  { color: #a78bfa; background: rgba(167,139,250,.08); border: 1px solid rgba(167,139,250,.15); }
+.b-db    { color: #f59e0b; background: rgba(245,158,11,.08);  border: 1px solid rgba(245,158,11,.15); }
+.b-ver   { color: #34d399; background: rgba(52,211,153,.08);  border: 1px solid rgba(52,211,153,.15); }
+.b-ed    { color: #f87171; background: rgba(248,113,113,.08); border: 1px solid rgba(248,113,113,.15); }
+.nivel { display: flex; align-items: center; gap: 6px; }
+.nivel-dots { display: flex; gap: 3px; }
+.nivel span { font-size: 9px; color: #555; }
+.dot { width: 6px; height: 6px; border-radius: 50%; background: #1e1e1e; border: 1px solid #2a2a2a; }
+.inter .dot.on { background: #a78bfa; border-color: #a78bfa; box-shadow: 0 0 4px #a78bfa6; }
+.avan  .dot.on { background: #34d399; border-color: #34d399; box-shadow: 0 0 4px #34d3996; }
+.año { color: #2e2e2e; font-size: 9px; transition: color .2s; }
+.tec-table tbody tr:hover .año { color: #555; }
+.footer-row td {
+  color: #2e2e2e; font-size: 9px; letter-spacing: 0.1em;
+  text-align: center; padding: 10px;
+  background: #050505; border-top: 1px solid #111;
+}
+.botton-tabla {
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 30px;
+  font-family: 'ethereal-nymeria', sans-serif;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  font-weight: bold;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  text-decoration: none;
+  display: inline-block;
+}
+.botton-tabla:hover { border: 1px solid white; }
+.botton-tabla:active { box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff; }
+
+
+.table-outer {
+  max-width: 600px; margin: 0 auto;
+  overflow: hidden;
+  max-height: 0; opacity: 0;
+  transition: max-height .45s ease, opacity .35s ease, margin-top .35s ease;
+}
+
+/* cuando el checkbox está chequeado */
+#toggle-tabla:checked ~ .table-outer {
+  max-height: 600px; opacity: 1; margin-top: 20px;
+}
+#toggle-tabla:checked ~ .toggle-btn .arrow {
+  transform: rotate(180deg);
+}
