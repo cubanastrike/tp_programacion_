@@ -801,3 +801,33 @@ header {
   margin-left: auto;
   flex-shrink: 0;
 }
+
+* ── FOOTER ── */
+footer {
+  background: #000;
+  border-top: 1px solid #1a1a1a;
+  padding: 24px 44px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 100px;
+}
+
+footer p {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #2e2e2e;
+  letter-spacing: 0.12em;
+  margin: 0;
+}
+
+footer a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  color: #333;
+  text-decoration: none;
+  letter-spacing: 0.12em;
+  transition: color .3s;
+}
+
+footer a:hover { color: #fff; }
