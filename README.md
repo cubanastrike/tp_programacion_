@@ -105,6 +105,18 @@ Aplicar y profundizar conocimientos de HTML y CSS, incluyendo:
 
 ---
 
+## 📸 Vista previa
+
+
+
+![Inicio](img/capturas_del_proyecto/cacaptura1.png)
+![Sobre mí](img/capturas_del_proyecto/captura4.png)
+![Tecnologías](img/capturas_del_proyecto/captura2.png)
+![Tecnologías](img/capturas_del_proyecto/captura3.png)
+![Proyectos](img/capturas_del_proyecto/captura5.png)
+![Cursos](img/capturas_del_proyecto/captura6.png)
+![Contacto](img/capturas_del_proyecto/captura7.png)
+
 ## 👨‍💻 Autor
 
 **Matías Barú**
