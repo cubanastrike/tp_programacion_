@@ -498,3 +498,112 @@ header {
 #toggle-tabla:checked ~ .toggle-btn .arrow {
   transform: rotate(180deg);
 }
+
+/*cursos */
+#cursos {
+  padding: 100px 44px 0;
+  background: #000;
+  text-align: center;
+}
+.cursos-titulo {
+  font-family: 'luxena', sans-serif;
+  color: #4e4e4e;
+  font-size: 5em;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+  animation: titilar 4s infinite;
+}
+.cursos-subtitulo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: #333;
+  letter-spacing: 0.12em; margin-bottom: 60px;
+}
+.cursos-subtitulo span { color: #555; }
+
+.cursos-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.curso-card {
+  background: #0a0a0a;
+  border: 1px solid #1c1c1c;
+  border-radius: 12px;
+  padding: 20px;
+  width: 440px;
+  text-align: left;
+  transition: border-color .3s;
+}
+.curso-card:hover { border-color: #2a2a2a; }
+
+.curso-info { margin-bottom: 14px; }
+
+.curso-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #f7df1e;
+  background: rgba(247,223,30,.07);
+  border: 1px solid rgba(247,223,30,.15);
+  border-radius: 4px;
+  padding: 3px 8px;
+}
+.curso-nombre {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px; font-weight: 700;
+  color: #c9d1d9; letter-spacing: 0.08em;
+  margin: 10px 0 4px;
+}
+.curso-autor {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px; color: #333;
+  letter-spacing: 0.08em; margin: 0;
+}
+
+/* efecto neon rojo */
+.video-neon {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 30, 30, 0.4);
+  box-shadow:
+    0 0 6px rgba(255, 30, 30, 0.4),
+    0 0 18px rgba(255, 30, 30, 0.25),
+    0 0 40px rgba(255, 30, 30, 0.1),
+    inset 0 0 10px rgba(255, 30, 30, 0.05);
+  animation: neon-pulso 3s ease-in-out infinite;
+}
+
+@keyframes neon-pulso {
+  0%, 100% {
+    box-shadow:
+      0 0 6px rgba(255, 30, 30, 0.4),
+      0 0 18px rgba(255, 30, 30, 0.25),
+      0 0 40px rgba(255, 30, 30, 0.1);
+    border-color: rgba(255, 30, 30, 0.4);
+  }
+  50% {
+    box-shadow:
+      0 0 10px rgba(255, 30, 30, 0.7),
+      0 0 30px rgba(255, 30, 30, 0.4),
+      0 0 60px rgba(255, 30, 30, 0.2);
+    border-color: rgba(255, 30, 30, 0.7);
+  }
+}
+
+.video-neon {
+  position: relative;
+}
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  z-index: 2;
+  cursor: pointer;
+}
+.video-overlay.oculto {
+  display: none;
+}
