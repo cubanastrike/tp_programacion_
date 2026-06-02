@@ -10,6 +10,8 @@
   font-family: 'ethereal-nymeria';
   src: url('fonts/Ethereal\ Nymeria\ Personal\ Use.ttf') format('truetype');
 }
+
+/* ── VARIABLES Y RESET ── */
 :root {
   --color-bg: #000;
   --color-surface: #0a0a0a;
@@ -27,6 +29,8 @@ body {
   padding: 0;
   background-color: #000;
 }
+
+/* ── NAVBAR ── */
 header {
   position: sticky;
   top: 0;
@@ -120,8 +124,7 @@ header {
 }
 .comentario:hover { color: #fff; }
 
-/*vista principal*/
-
+/* ── HERO ── */
 .hero {
   position: relative;
   width: 100%;
@@ -139,6 +142,7 @@ header {
   color: #4e4e4e;
   margin: 0;
   animation: titilar 4s infinite;
+  white-space: nowrap;
 }
 .btn_cv_wrapper {
   position: absolute;
@@ -180,8 +184,7 @@ header {
   78% { color: #ffffff; text-shadow: 0 0 4px #fff, 0 0 10px #fff; }
 }
 
-/*seccion sobre mi*/
-
+/* ── SOBRE MÍ ── */
 #toggle-terminal:checked ~ .conoceme-wrapper .terminal { display: block; }
 
 #sobre-mi {
@@ -269,7 +272,7 @@ header {
   margin: 0;
 }
 
-* ── PROYECTOS ── */
+/* ── PROYECTOS ── */
 #proyectos {
   padding: 100px 44px 0;
   background: #000;
@@ -289,6 +292,10 @@ header {
   letter-spacing: 0.12em; margin-bottom: 60px;
 }
 .proyectos-subtitulo span { color: #555; }
+.proyectos-flex-center {
+  display: flex;
+  justify-content: center;
+}
 .proj-label { cursor: pointer; display: inline-block; }
 .proj-label input { display: none; }
 .proj-card {
@@ -483,15 +490,12 @@ header {
 .botton-tabla:hover { border: 1px solid white; }
 .botton-tabla:active { box-shadow: 4px 4px 12px #c5c5c5, -4px -4px 12px #ffffff; }
 
-
 .table-outer {
   max-width: 600px; margin: 0 auto;
   overflow: hidden;
   max-height: 0; opacity: 0;
   transition: max-height .45s ease, opacity .35s ease, margin-top .35s ease;
 }
-
-/* cuando el checkbox está chequeado */
 #toggle-tabla:checked ~ .table-outer {
   max-height: 600px; opacity: 1; margin-top: 20px;
 }
@@ -499,7 +503,7 @@ header {
   transform: rotate(180deg);
 }
 
-/*cursos */
+/* ── CURSOS ── */
 #cursos {
   padding: 100px 44px 0;
   background: #000;
@@ -519,7 +523,6 @@ header {
   letter-spacing: 0.12em; margin-bottom: 60px;
 }
 .cursos-subtitulo span { color: #555; }
-
 .cursos-grid {
   display: flex;
   flex-wrap: wrap;
@@ -528,7 +531,6 @@ header {
   max-width: 1000px;
   margin: 0 auto;
 }
-
 .curso-card {
   background: #0a0a0a;
   border: 1px solid #1c1c1c;
@@ -539,9 +541,7 @@ header {
   transition: border-color .3s;
 }
 .curso-card:hover { border-color: #2a2a2a; }
-
 .curso-info { margin-bottom: 14px; }
-
 .curso-badge {
   font-family: 'JetBrains Mono', monospace;
   font-size: 8px; font-weight: 700;
@@ -564,7 +564,7 @@ header {
   letter-spacing: 0.08em; margin: 0;
 }
 
-/* efecto neon rojo */
+/* ── ANIMACIÓN NEON VIDEOS ── */
 .video-neon {
   border-radius: 8px;
   overflow: hidden;
@@ -575,8 +575,8 @@ header {
     0 0 40px rgba(255, 30, 30, 0.1),
     inset 0 0 10px rgba(255, 30, 30, 0.05);
   animation: neon-pulso 3s ease-in-out infinite;
+  position: relative;
 }
-
 @keyframes neon-pulso {
   0%, 100% {
     box-shadow:
@@ -593,10 +593,6 @@ header {
     border-color: rgba(255, 30, 30, 0.7);
   }
 }
-
-.video-neon {
-  position: relative;
-}
 .video-overlay {
   position: absolute;
   top: 0; left: 0;
@@ -604,12 +600,9 @@ header {
   z-index: 2;
   cursor: pointer;
 }
-.video-overlay.oculto {
-  display: none;
-}
+.video-overlay.oculto { display: none; }
 
-*contacto*/
-
+/* ── CONTACTO ── */
 #contacto {
   padding: 100px 44px 80px;
   background: #000;
@@ -618,7 +611,6 @@ header {
   align-items: center;
   text-align: center;
 }
-
 #contacto h2 {
   font-family: 'luxena', sans-serif;
   color: #4e4e4e;
@@ -627,7 +619,6 @@ header {
   margin-bottom: 12px;
   animation: titilar 4s infinite;
 }
-
 #contacto > p {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -635,7 +626,6 @@ header {
   letter-spacing: 0.12em;
   margin-bottom: 48px;
 }
-
 #contacto-inner {
   display: flex;
   gap: 32px;
@@ -645,12 +635,7 @@ header {
   max-width: 780px;
   width: 100%;
 }
-
-/* ── FORMULARIO ── */
-.contact-form {
-  all: unset;
-}
-
+.contact-form { all: unset; }
 .fieldset {
   background: #0a0a0a;
   border: 1px solid #1c1c1c;
@@ -663,7 +648,6 @@ header {
   align-items: stretch;
   box-sizing: border-box;
 }
-
 .fieldset legend {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
@@ -672,9 +656,7 @@ header {
   text-transform: uppercase;
   padding: 0 10px;
 }
-
 .fieldset br { display: none; }
-
 .imput_1 {
   background: #050505;
   border: 1px solid #111;
@@ -693,7 +675,6 @@ header {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.17);
 }
-
 .escribe {
   background: #050505;
   border: 1px solid #111;
@@ -714,7 +695,6 @@ header {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.17);
 }
-
 .fieldset button[type="submit"] {
   font-family: 'JetBrains Mono', monospace;
   background: #e8e8e8;
@@ -735,22 +715,23 @@ header {
   box-shadow: 2px 2px 8px #c5c5c5, -2px -2px 8px #fff;
 }
 
-* ── REDES CONTACTO ── */
+/* ── REDES CONTACTO ── */
 .redes-col {
   display: flex;
   flex-direction: column;
   gap: 12px;
   width: 200px;
 }
-
-.redes-col-header {
+.titulo-redes {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   color: #2e2e2e;
   letter-spacing: 0.15em;
   padding-bottom: 10px;
   border-bottom: 1px solid #111;
+  transition: color .3s;
 }
+.titulo-redes:hover { color: #ffbb00; }
 
 .red-card-contact {
   background: #0a0a0a;
@@ -764,20 +745,17 @@ header {
   transition: border-color .3s, background .3s;
 }
 .red-card-contact:hover { background: #111; border-color: #333; }
-
 .red-card-contact .card-icon {
   width: 32px; height: 32px;
   border-radius: 6px;
   display: flex; align-items: center; justify-content: center;
   flex-shrink: 0;
 }
-
 .red-card-contact .card-info {
   display: flex;
   flex-direction: column;
   gap: 2px;
 }
-
 .red-card-contact .card-name {
   font-family: 'JetBrains Mono', monospace;
   font-size: 11px;
@@ -785,14 +763,12 @@ header {
   color: #c9d1d9;
   letter-spacing: 0.07em;
 }
-
 .red-card-contact .card-handle {
   font-family: 'JetBrains Mono', monospace;
   font-size: 9px;
   color: #333;
   letter-spacing: 0.06em;
 }
-
 .red-card-contact .status-dot {
   width: 5px; height: 5px;
   border-radius: 50%;
@@ -802,7 +778,7 @@ header {
   flex-shrink: 0;
 }
 
-* ── FOOTER ── */
+/* ── FOOTER ── */
 footer {
   background: #000;
   border-top: 1px solid #1a1a1a;
@@ -812,7 +788,6 @@ footer {
   align-items: center;
   margin-top: 100px;
 }
-
 footer p {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
@@ -820,7 +795,6 @@ footer p {
   letter-spacing: 0.12em;
   margin: 0;
 }
-
 footer a {
   font-family: 'JetBrains Mono', monospace;
   font-size: 10px;
@@ -829,5 +803,132 @@ footer a {
   letter-spacing: 0.12em;
   transition: color .3s;
 }
-
 footer a:hover { color: #fff; }
+
+/*
+   RESPONSIVE — TABLET  max-width: 768px*/
+   @media (max-width: 768px) {
+
+  /* navbar */
+  .nav-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 12px 16px 8px;
+  }
+  .nav-accesos { align-self: flex-end; }
+  .nav-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 16px;
+    gap: 6px;
+  }
+  .nav-lista { flex-wrap: wrap; gap: 2px; }
+  .comentario { margin-left: 0; }
+
+  /* hero */
+  .hero { height: 300px; }
+  .hero_titulo {
+    font-size: 2rem;
+    white-space: normal;
+    text-align: center;
+    width: 90%;
+  }
+
+  /* títulos de sección */
+  .conoceme-titulo,
+  .proyectos-titulo,
+  .tec-titulo,
+  .cursos-titulo,
+  #contacto h2 {
+    font-size: 3em;
+    letter-spacing: 4px;
+  }
+
+  /* terminal */
+  .terminal { width: 90%; }
+
+  /* tecnologías */
+  .tec-grid { gap: 10px; }
+  .tec-table-wrap { margin: 32px 16px 0; }
+
+  /* cursos */
+  .cursos-grid { gap: 24px; }
+  .curso-card { width: 90%; max-width: 440px; }
+
+  /* contacto */
+  #contacto-inner { flex-direction: column; align-items: center; }
+  .fieldset { width: 90%; max-width: 360px; }
+  .redes-col { width: 90%; max-width: 360px; }
+
+  /* footer */
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+    padding: 20px 24px;
+  }
+}
+  
+/*RESPONSIVE — CELULAR  max-width: 480px*/
+@media (max-width: 480px) {
+
+  /* navbar */
+  .nav-nombre { font-size: 11px; }
+  .nav-rol { font-size: 10px; }
+  .nav-accesos a,
+  .nav-lista li a { font-size: 10px; }
+
+  /* hero */
+  .hero { height: 260px; }
+  .hero_titulo {
+    font-size: 1.2rem;
+    letter-spacing: 0.08em;
+  }
+  .btn_cv_wrapper { top: calc(50% + 70px); }
+  .btn_cv { font-size: 11px; padding: 0.6em 1.3em; }
+
+  /* secciones */
+  #sobre-mi,
+  #proyectos,
+  #tecnologias,
+  #cursos,
+  #contacto {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  /* títulos de sección */
+  .conoceme-titulo,
+  .proyectos-titulo,
+  .tec-titulo,
+  .cursos-titulo,
+  #contacto h2 {
+    font-size: 2.2em;
+    letter-spacing: 3px;
+  }
+
+  /* terminal */
+  .terminal { width: 95%; }
+  .terminal-body { height: 180px; padding: 14px; }
+  .terminal-linea { font-size: 0.82rem; }
+
+  /* tecnologías — íconos */
+  .tech { width: 68px; height: 68px; }
+  .tech img { width: 26px; height: 26px; }
+  .tech span { font-size: 8px; }
+
+  /* tabla tecnologías */
+  .tec-table thead th,
+  .tec-table tbody td {
+    font-size: 9px;
+    padding: 8px 10px;
+  }
+
+  /* cursos */
+  .curso-card { width: 95%; padding: 16px; }
+
+  /* contacto */
+  .fieldset { width: 95%; padding: 18px 14px; }
+  .redes-col { width: 95%; }
+}
