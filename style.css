@@ -268,3 +268,90 @@ header {
   white-space: pre-wrap;
   margin: 0;
 }
+
+* ── PROYECTOS ── */
+#proyectos {
+  padding: 100px 44px 0;
+  background: #000;
+  text-align: center;
+}
+.proyectos-titulo {
+  font-family: 'luxena', sans-serif;
+  color: #4e4e4e;
+  font-size: 5em;
+  letter-spacing: 8px;
+  margin-bottom: 12px;
+  animation: titilar 4s infinite;
+}
+.proyectos-subtitulo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; color: #333;
+  letter-spacing: 0.12em; margin-bottom: 60px;
+}
+.proyectos-subtitulo span { color: #555; }
+.proj-label { cursor: pointer; display: inline-block; }
+.proj-label input { display: none; }
+.proj-card {
+  width: 130px; height: 160px;
+  background: #0a0a0a; border: 1px solid #1c1c1c;
+  border-radius: 12px; padding: 16px 14px;
+  display: flex; flex-direction: column; gap: 10px;
+  position: relative; overflow: hidden;
+  transition: border-color .3s, transform .3s, background .3s;
+}
+.proj-card::after {
+  content: ''; position: absolute;
+  bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 0; height: 2px; background: #f59e0b;
+  border-radius: 2px; transition: width .35s;
+}
+.proj-label:hover .proj-card,
+.proj-label input:checked ~ .proj-card {
+  background: #0f0f0f; border-color: #2a2a2a; transform: translateY(-6px);
+}
+.proj-label:hover .proj-card::after,
+.proj-label input:checked ~ .proj-card::after { width: 70%; }
+.proj-icon {
+  width: 40px; height: 40px; border-radius: 8px;
+  background: rgba(245,158,11,.07); border: 1px solid rgba(245,158,11,.17);
+  color: #f59e0b; display: flex; align-items: center; justify-content: center;
+  position: relative; transition: background .3s, border-color .3s;
+}
+.proj-label:hover .proj-icon,
+.proj-label input:checked ~ .proj-card .proj-icon {
+  background: rgba(245,158,11,.13); border-color: rgba(245,158,11,.33);
+}
+.proj-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #1e1e1e; border: 1px solid #2a2a2a;
+  position: absolute; top: -3px; right: -3px; transition: background .3s;
+}
+.proj-label:hover .proj-dot,
+.proj-label input:checked ~ .proj-card .proj-dot {
+  background: #f59e0b; border-color: #f59e0b; animation: pulso 1.5s infinite;
+}
+.proj-name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px; font-weight: 700; color: #555; letter-spacing: .08em; transition: color .3s;
+}
+.proj-label:hover .proj-name,
+.proj-label input:checked ~ .proj-card .proj-name { color: #f59e0b; }
+.proj-type {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; color: #2e2e2e; letter-spacing: .1em; flex: 1; transition: color .3s;
+}
+.proj-label:hover .proj-type,
+.proj-label input:checked ~ .proj-card .proj-type { color: #555; }
+.proj-cmd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; color: #1e1e1e;
+  background: #050505; border: 1px solid #111;
+  border-radius: 4px; padding: 4px 6px;
+  text-decoration: none; display: block;
+  transition: color .3s, border-color .3s;
+}
+.proj-label:hover .proj-cmd,
+.proj-label input:checked ~ .proj-card .proj-cmd {
+  color: rgba(245,158,11,.5); border-color: rgba(245,158,11,.17);
+}
+.proj-cmd span { color: #f59e0b; }
