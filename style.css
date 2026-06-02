@@ -1,0 +1,121 @@
+@font-face {
+  font-family: 'luxena';
+  src: url('fonts/Luxena.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'nordic-frost';
+  src: url('fonts/Nordic\Frost.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'ethereal-nymeria';
+  src: url('fonts/Ethereal\ Nymeria\ Personal\ Use.ttf') format('truetype');
+}
+:root {
+  --color-bg: #000;
+  --color-surface: #0a0a0a;
+  --color-border: #1c1c1c;
+  --color-text: #c9d1d9;
+  --color-muted: #555;
+  --font-mono: 'JetBrains Mono', monospace;
+  --font-display: 'luxena', sans-serif;
+  --radius-card: 12px;
+  --radius-btn: 8px;
+}
+body {
+  color: #c9d1d9;
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.navbar {
+  font-family: 'JetBrains Mono', monospace;
+  background-color: #000;
+  border-bottom: 1px solid #222;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.logo_ico {
+  object-fit: cover;
+  border-radius: 4px;
+}
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 24px 10px;
+  border-bottom: 1px solid #1a1a1a;
+}
+.nav-logo {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.nav-logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+.nav-nombre {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #fff;
+  transition: color 0.3s ease;
+}
+.nav-nombre:hover { color: #7a797c; }
+.nav-rol {
+  font-size: 11px;
+  color: #666;
+  letter-spacing: 0.08em;
+  padding-top: 8px;
+  transition: color 0.3s ease;
+}
+.nav-rol:hover { color: #fff; }
+.nav-accesos {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-accesos a {
+  font-size: 11px;
+  color: #888;
+  text-decoration: none;
+  letter-spacing: 0.06em;
+  transition: color 0.3s ease;
+}
+.nav-accesos a:hover { color: rgba(56, 1, 1, 0.89); }
+.corchete { color: #444; font-size: 11px; }
+.punto { color: #333; font-size: 11px; margin: 0 4px; }
+.nav-bottom {
+  display: flex;
+  align-items: center;
+  padding: 8px 24px;
+}
+.nav-lista {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  flex-wrap: wrap;
+}
+.nav-lista li a {
+  font-size: 11px;
+  color: #555;
+  text-decoration: none;
+  letter-spacing: 0.07em;
+  padding: 4px 10px;
+  display: inline-block;
+}
+.nav-lista li a:hover { color: #fff; }
+.separador { color: #2a2a2a; font-size: 11px; }
+.comentario {
+  font-size: 10px;
+  color: #2e2e2e;
+  margin-left: auto;
+  transition: color 0.3s ease;
+}
+.comentario:hover { color: #fff; }
