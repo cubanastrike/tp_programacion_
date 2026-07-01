@@ -149,6 +149,10 @@ El formulario de contacto valida que los campos obligatorios (nombre, email, men
 **Buscador de tecnologías**: mientras el usuario escribe, la grilla y la tabla se filtran en vivo mostrando solo las tecnologías que coinciden con el texto buscado (por nombre o categoría).
 
 ---
+## Visualizacion del PORTAFOLIO   
+                        --> DALE UN VISTASO <---
+ LINK: https://cubanastrike.github.io/tp_programacion_/
+
 
 ## 🔗 Repositorio
 [github.com/cubanastrike](https://github.com/cubanastrike)
