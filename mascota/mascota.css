@@ -1,0 +1,14 @@
+/*MASCOTA*/
+
+#mascota {
+  position: fixed;
+  bottom: 10px;
+  left: 0;
+  width: 70px;
+  image-rendering: pixelated;
+  z-index: 9999;
+  cursor: pointer;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
