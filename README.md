@@ -1,7 +1,7 @@
 # 💻 Portfolio Web - Matías Barú
 
 ## 📌 Descripción
-Este proyecto es un portfolio web personal desarrollado con HTML5 y CSS3.
+Este proyecto es un portfolio web personal desarrollado con HTML5, CSS3 y JavaScript.
 Su objetivo es mostrar información personal, habilidades, tecnologías aprendidas, proyectos y un formulario de contacto.
 
 ---
@@ -35,6 +35,7 @@ portfolio/
 
 - HTML5
 - CSS3
+- JavaScript (vanilla, sin librerías ni frameworks)
 
 ---
 
@@ -116,6 +117,41 @@ Aplicar y profundizar conocimientos de HTML y CSS, incluyendo:
 ![Proyectos](img/capturas_del_proyecto/captura5.png)
 ![Cursos](img/capturas_del_proyecto/captura6.png)
 ![Contacto](img/capturas_del_proyecto/captura7.png)
+
+---
+
+## ⚙️ Funcionalidades JavaScript (script.js)
+
+Toda la interactividad se implementa en un archivo externo `script.js`, vinculado con `<script src="script.js" defer>`, sin ningún `onclick`/`onchange` dentro del HTML.
+
+### Array de datos
+- `tecnologias`: array de objetos (nombre, categoría, nivel, año, ícono, descripción) que alimenta **toda** la sección "Tecnologías": tanto la grilla de íconos como la tabla de estadísticas se generan a partir de este único array.
+
+### Funciones principales
+- `renderTecnologias(lista)` — crea dinámicamente (`createElement`/`appendChild`) las tarjetas de la grilla y las filas de la tabla a partir del array.
+- `filtrarTecnologias(evento)` — buscador en tiempo real: filtra el array por nombre o categoría y vuelve a renderizar.
+- `mostrarDescripcionTecnologia` / `ocultarDescripcionTecnologia` — muestran/ocultan una descripción de la tecnología sobre la que se pasa el mouse.
+- `mostrarTabla()` — hace scroll suave hasta la tabla de estadísticas al abrirla.
+- `actualizarContador(evento)` — contador de caracteres en vivo para el mensaje del formulario.
+- `validarFormulario(datos)` — valida los campos obligatorios y lanza errores (`throw`) descriptivos.
+- `manejarEnvioFormulario(evento)` — controla el envío del formulario con `try/catch`, muestra mensajes de éxito/error y marca en rojo los campos inválidos.
+
+### Eventos implementados
+`input` (buscador de tecnologías) · `mouseover` / `mouseout` (descripción de tecnología) · `click` (ver tabla de estadísticas) · `keyup` (contador de caracteres) · `submit` (validación del formulario de contacto).
+
+### Manipulación del DOM
+Creación de elementos (`createElement`), inserción (`appendChild`/`innerHTML`), modificación de texto (`textContent`), y mostrar/ocultar contenido (`classList.add/remove`).
+
+### Validación y manejo de errores
+El formulario de contacto valida que los campos obligatorios (nombre, email, mensaje) no estén vacíos y cumplan un largo mínimo, valida el formato del email con una expresión regular, y usa `try { ... } catch(error) { ... }` para capturar errores de validación y mostrarlos al usuario sin romper la ejecución.
+
+### Funcionalidad principal
+**Buscador de tecnologías**: mientras el usuario escribe, la grilla y la tabla se filtran en vivo mostrando solo las tecnologías que coinciden con el texto buscado (por nombre o categoría).
+
+---
+
+## 🔗 Repositorio
+[github.com/cubanastrike](https://github.com/cubanastrike)
 
 ## 👨‍💻 Autor
 
