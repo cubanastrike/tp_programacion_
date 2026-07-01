@@ -384,6 +384,40 @@ header {
 }
 .tec-subtitulo span { color: #555; }
 
+/* buscador de tecnologías (JS) */
+.tec-buscador-wrap {
+  display: flex; align-items: center; gap: 8px;
+  max-width: 340px; margin: 0 auto 32px;
+  background: #050505; border: 1px solid #1c1c1c; border-radius: 25px;
+  padding: 9px 16px;
+  transition: border-color .3s;
+}
+.tec-buscador-wrap:focus-within { border-color: rgba(245,158,11,.4); }
+.tec-buscador-prompt {
+  font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #f59e0b;
+}
+.tec-buscador {
+  flex: 1; background: transparent; border: none; outline: none;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  color: #c9d1d9; letter-spacing: 0.04em;
+}
+.tec-buscador::placeholder { color: #3a3a3a; }
+.tec-resultados {
+  font-family: 'JetBrains Mono', monospace; font-size: 9px; color: #555; white-space: nowrap;
+}
+.tec-sin-resultados {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #444;
+  width: 100%; padding: 20px;
+}
+
+/* descripción al pasar el mouse por una tecnología */
+.tec-descripcion {
+  font-family: 'JetBrains Mono', monospace; font-size: 10px; color: #2e2e2e;
+  max-width: 480px; margin: 20px auto 0; letter-spacing: 0.02em;
+  min-height: 14px; transition: color .3s;
+}
+.tec-descripcion.visible { color: #f59e0b; }
+
 /* logos */
 .tec-grid {
   display: flex; flex-wrap: wrap; gap: 14px;
@@ -695,6 +729,34 @@ header {
   color: rgba(255, 255, 255, 0.5);
   border-color: rgba(255, 255, 255, 0.17);
 }
+
+/* contador de caracteres del mensaje (JS) */
+.contador-mensaje {
+  display: block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 8px; color: #333; letter-spacing: 0.08em;
+  text-align: right; margin-top: 4px;
+}
+.contador-mensaje.limite-cerca { color: #f59e0b; }
+.contador-mensaje.limite-lleno { color: #f87171; }
+
+/* campos inválidos tras validación (JS) */
+.imput_1.campo-error,
+.escribe.campo-error {
+  border-color: rgba(248, 113, 113, .5);
+  color: #f87171;
+}
+
+/* mensaje de éxito / error del formulario (JS) */
+.form-mensaje {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px; letter-spacing: 0.05em;
+  text-align: center; margin: 0; height: 0; opacity: 0;
+  overflow: hidden; transition: opacity .3s, height .3s;
+}
+.form-mensaje.visible { height: auto; opacity: 1; margin-top: 10px; }
+.form-mensaje.exito { color: #34d399; }
+.form-mensaje.error { color: #f87171; }
 .fieldset button[type="submit"] {
   font-family: 'JetBrains Mono', monospace;
   background: #e8e8e8;
