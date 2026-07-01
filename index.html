@@ -113,7 +113,7 @@
         </div>
         <p class="proj-name">tp_transacciones</p>
         <p class="proj-type">// base de datos</p>
-        <a href="doc/TP_Transacciones_ (1).pdf" target="_blank" class="proj-cmd" onclick="event.stopPropagation()">
+        <a href="doc/TP_Transacciones_ (1).pdf" target="_blank" class="proj-cmd" id="link-abrir-pdf">
           <span>$</span> abrir.pdf
         </a>
       </div>
@@ -128,52 +128,27 @@
   <h2 class="tec-titulo">TECNOLOGÍAS</h2>
   <p class="tec-subtitulo">// <span>stack actual</span> — en aprendizaje continuo</p>
 
-  <div class="tec-grid">
-    <div class="tech t-html">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
-      <span>HTML5</span>
-    </div>
-    <div class="tech t-css">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
-      <span>CSS3</span>
-    </div>
-    <div class="tech t-js">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
-      <span>JavaScript</span>
-    </div>
-    <div class="tech t-cs">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
-      <span>C#</span>
-    </div>
-    <div class="tech t-net">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg" alt=".NET">
-      <span>.NET</span>
-    </div>
-    <div class="tech t-mysql">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
-      <span>MySQL</span>
-    </div>
-    <div class="tech t-git">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
-      <span>Git</span>
-    </div>
-    <div class="tech t-github">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original-wordmark.svg" alt="GitHub">
-      <span>GitHub</span>
-    </div>
-    <div class="tech t-vscode">
-      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code">
-      <span>VS Code</span>
-    </div>
+  <!-- Buscador de tecnologías (JS: evento input + array `tecnologias`) -->
+  <div class="tec-buscador-wrap">
+    <span class="tec-buscador-prompt">$</span>
+    <input type="text" id="buscador-tec" class="tec-buscador" placeholder="buscar tecnología o categoría...">
+    <span id="tec-resultados" class="tec-resultados"></span>
   </div>
+
+  <!-- Grilla generada dinámicamente por script.js a partir del array `tecnologias` -->
+  <div class="tec-grid" id="tec-grid"></div>
+
+  <!-- Descripción que aparece al pasar el mouse sobre una tecnología -->
+  <p id="tec-descripcion" class="tec-descripcion">// pasá el mouse sobre una tecnología para ver más info</p>
+
 <input type="checkbox" id="toggle-tabla" style="display:none">
 
 <div class="botton-tabla">
-  <label for="toggle-tabla" onclick="scrollTabla()" class="toggle-btn">
+  <label for="toggle-tabla" id="btn-ver-tabla" class="toggle-btn">
     <span> Estadisticas</span>
   </label>
 </div>
-<div class="table-outer">
+<div class="table-outer" id="tabla-outer">
   <div class="tec-table-wrap">
     <table class="tec-table">
       <thead>
@@ -184,67 +159,11 @@
           <th>DESDE</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-          <td>HTML5</td>
-          <td><span class="badge b-front">front-end</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2024</span></td>
-        </tr>
-        <tr>
-          <td>CSS3</td>
-          <td><span class="badge b-front">front-end</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2024</span></td>
-        </tr>
-        <tr>
-          <td>JavaScript</td>
-          <td><span class="badge b-front">front-end</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div><span>básico</span></div></td>
-          <td><span class="año">2025</span></td>
-        </tr>
-        <tr>
-          <td>C#</td>
-          <td><span class="badge b-back">back-end</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2024</span></td>
-        </tr>
-        <tr>
-          <td>.NET</td>
-          <td><span class="badge b-back">back-end</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2024</span></td>
-        </tr>
-        <tr>
-          <td>SQL</td>
-          <td><span class="badge b-db">base de datos</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2025</span></td>
-        </tr>
-        <tr>
-          <td>Git</td>
-          <td><span class="badge b-ver">versionado</span></td>
-          <td><div class="nivel avan"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div><span>avanzado</span></div></td>
-          <td><span class="año">2025</span></td>
-        </tr>
-        <tr>
-          <td>GitHub</td>
-          <td><span class="badge b-ver">versionado</span></td>
-          <td><div class="nivel avan"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot on"></span></div><span>avanzado</span></div></td>
-          <td><span class="año">2025</span></td>
-        </tr>
-        <tr>
-          <td>VS Code</td>
-          <td><span class="badge b-ed">editor</span></td>
-          <td><div class="nivel inter"><div class="nivel-dots"><span class="dot on"></span><span class="dot on"></span><span class="dot"></span></div><span>intermedio</span></div></td>
-          <td><span class="año">2024</span></td>
-        </tr>
-        <tr class="footer-row">
-          <td colspan="4">// tecnologías en aprendizaje continuo</td>
-        </tr>
-      </tbody>
+      <!-- Filas generadas dinámicamente por script.js -->
+      <tbody id="tec-tabla-body"></tbody>
     </table>
   </div>
+</div>
 </section>
 
   <br>
@@ -301,14 +220,16 @@
 
   <div id="contacto-inner">
 
-    <form action="#" method="POST" class="contact-form">
+    <form action="#" method="POST" class="contact-form" id="form-contacto" novalidate>
       <fieldset class="fieldset">
         <legend class="title">contactame</legend>
         <input class="imput_1" type="text" id="nombre" name="nombre" placeholder="Name" minlength="3" maxlength="50" required><br><br>
         <input class="imput_1" type="email" id="email" name="email" placeholder="Email" required><br><br>
         <input class="imput_1" type="text" id="asunto" name="asunto" placeholder="Ej: Consulta, propuesta, trabajo..." minlength="5"><br><br>
-        <textarea class="escribe" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..." minlength="10" required></textarea><br><br>
+        <textarea class="escribe" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu mensaje acá..." minlength="10" maxlength="500" required></textarea>
+        <span id="contador-mensaje" class="contador-mensaje">0 / 500</span><br><br>
         <button type="submit">Enviar mensaje</button>
+        <p id="form-mensaje" class="form-mensaje"></p>
       </fieldset>
     </form>
 
@@ -366,6 +287,8 @@
   <a href="#inicio">↑ Volver al inicio</a>
 </footer>
 
+
+<script src="script.js" defer></script>
 
 </body>
 
