@@ -8,10 +8,15 @@
   <link rel="stylesheet" href="cursor/cursor.css">
   <link rel="stylesheet" href="mascota/mascota.css">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
+  <div 
+  id="crosshair-root" 
+  style="position: fixed; inset: 0; width: 100vw; height: 100vh; pointer-events: none; z-index: 9999;">
+</div>
 <div class="cursor"></div>
 <img id="mascota" src="img/Welcome to my.gif" alt="mascota" />
 
@@ -57,8 +62,8 @@
 <div class="hero">
   <h1 class="hero_titulo"> ✦ WELCOME TO MY PORTFOLIO ✦</h1>
   <div class="btn_cv_wrapper">
-    <a href="cv.pdf" download class="btn_cv">DESCARGAR CV</a>
-  </div>
+  <div id="water-button-root"></div>
+</div>
 </div>
 
 <main>
@@ -296,6 +301,8 @@
 <script src="script.js" defer></script>
 <script src="cursor/cursor.js" defer></script>
 <script src="mascota/mascota.js" defer></script>
+<script src="react-button/water-button.js" defer></script>
+<script src="react-crosshair/crosshair.js" defer></script>
 
 </body>
 
