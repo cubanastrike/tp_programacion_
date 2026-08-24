@@ -27,7 +27,7 @@ body {
   color: #c9d1d9;
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: transparent;
 }
 
 /* ── NAVBAR ── */
@@ -129,7 +129,7 @@ header {
   position: relative;
   width: 100%;
   height: 400px;
-  background-color: #000;
+  background-color: transparent;
 }
 .hero_titulo {
   letter-spacing: 0.2em;
@@ -192,7 +192,7 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: black;
+  background: transparent;
   padding-top: 80px;
   box-sizing: border-box;
 }
@@ -275,7 +275,7 @@ header {
 /* ── PROYECTOS ── */
 #proyectos {
   padding: 100px 44px 0;
-  background: #000;
+  background: transparent;
   text-align: center;
 }
 .proyectos-titulo {
@@ -366,7 +366,7 @@ header {
 /* ── TECNOLOGÍAS ── */
 #tecnologias {
   padding: 100px 44px 0;
-  background: #000;
+  background: transparent;
   text-align: center;
 }
 .tec-titulo {
@@ -540,7 +540,7 @@ header {
 /* ── CURSOS ── */
 #cursos {
   padding: 100px 44px 0;
-  background: #000;
+  background: transparent;
   text-align: center;
 }
 .cursos-titulo {
@@ -639,7 +639,7 @@ header {
 /* ── CONTACTO ── */
 #contacto {
   padding: 100px 44px 80px;
-  background: #000;
+  background: transparent;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -842,7 +842,7 @@ header {
 
 /* ── FOOTER ── */
 footer {
-  background: #000;
+  background: transparent;
   border-top: 1px solid #1a1a1a;
   padding: 24px 44px;
   display: flex;
